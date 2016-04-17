@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<title> Practice </title>
+
+<script src = "http://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+<script>
+
+	var a = d3.select("body")
+	.append("svg")
+	.attr("height", 800)
+	.attr("width", 800);
+
+	var circle = a.append("circle")
+	.attr("cx",700)
+	.attr("cy",700)
+	.attr("r", 15)
+	.attr("fill", "red");
+
+	var recta = a.append("rect")
+	.attr("x", 10)
+	.attr("y", 10)
+	.attr("width", 200)
+	.attr("height", 200)
+	.attr("fill", "purple")
+	.attr("stroke", "red")
+	.attr("stroke-width", 10);
+
+	var l = a.append("line")
+	.attr("x1", 0)
+	.attr("x2", 100)
+	.attr("x2", 700)
+	.attr("y2", 700)
+	.attr("stroke", "green")
+	.attr("stroke-width", 7);
+
+</script>
+
+
+
+</body>
+
+</html>

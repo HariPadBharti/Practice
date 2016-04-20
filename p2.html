@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<title> Practice </title>
+
+<script src = "http://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+<script>
+	var d1 = [20, 30, 40, 50, 60, 70, 80];
+	var a = d3.select("body")
+	.append("svg")
+	.attr("height", 800)
+	.attr("width", 800);
+
+	var ws = d3.scale.linear()
+				.domain([0, 80])
+				.range([0, 800]);
+	var barchart = a.selectAll("rect")
+				   .data(d1)
+				   .enter()
+				   	.append("rect")
+				   	.attr("width", 20)
+				   	.attr("height", function(d) { return d*5})
+				   	.attr("x", function(d, i) { return i*25 })
+				   	.attr("y", function(d, i) { return 420 - d*5 })
+				   	.attr("fill", "red")
+				   	.attr("stroke", "blue")
+				   	.attr("stroke-width", 2);
+
+	var axis = d3.svg.axis()
+				.scale(ws)
+				//. call(axis);
+
+
+
+/* var data = [ {Country : "USA", inbound: 784427}, {Country : "UK", inbound : 416693}, {Country : "AUS", inbound: 249868}, {Country: "FRA", inbound: 239344}, {Country: "GER", inbound: 196619}];*/
+</script>
+
+
+
+
+</body>
+
+</html>
